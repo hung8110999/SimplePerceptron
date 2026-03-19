@@ -15,19 +15,13 @@ jobs:
       - name: Check GPU
         run: nvidia-smi
 
-      - name: Activate conda env
+      - name: Show Python in Conda env
         run: |
-          conda init
-          source ~/.bashrc         
-          conda activate octree-gs2
-          python -V
+          /media/ctuav/corsair-ssd/miniconda3/envs/octree-gs2/bin/python -V
 
       - name: Train model
         run: |
-          conda init
-          source ~/.bashrc  
-          conda activate octree-gs2
-          python /home/hung.nguyen.e/MLOps/SimplePerceptron/train.py
+          /media/ctuav/corsair-ssd/miniconda3/envs/octree-gs2/bin/python train.py
 
       - name: Upload model artifact
         uses: actions/upload-artifact@v4
