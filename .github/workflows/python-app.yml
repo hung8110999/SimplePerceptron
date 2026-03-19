@@ -16,12 +16,16 @@ jobs:
         run: nvidia-smi
 
       - name: Activate conda env
-        run: |         
+        run: |
+          conda init
+          ~/.bashrc         
           conda activate octree-gs2
           python -V
 
       - name: Train model
         run: |
+          conda init
+          ~/.bashrc  
           conda activate octree-gs2
           python /home/hung.nguyen.e/MLOps/SimplePerceptron/train.py
 
