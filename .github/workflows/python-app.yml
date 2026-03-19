@@ -16,14 +16,12 @@ jobs:
         run: nvidia-smi
 
       - name: Activate conda env
-        run: |
-          source ~/anaconda3/etc/profile.d/conda.sh
+        run: |         
           conda activate octree-gs2
           python -V
 
       - name: Train model
         run: |
-          source ~/anaconda3/etc/profile.d/conda.sh
           conda activate octree-gs2
           python /home/hung.nguyen.e/MLOps/SimplePerceptron/train.py
 
@@ -31,4 +29,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: perceptron-model
-          path: perceptron_gpu0.pt
+          path: perceptron_gpu1.pt
