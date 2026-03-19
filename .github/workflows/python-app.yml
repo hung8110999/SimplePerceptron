@@ -17,11 +17,11 @@ jobs:
 
       - name: Show Python in Conda env
         run: |
-          /media/ctuav/corsair-ssd/miniconda3/envs/octree-gs2/bin/python -V
+          /home/hung.nguyen.e/.conda/envs/octree-gs2/bin/python -V
 
       - name: Train model
         run: |
-          /media/ctuav/corsair-ssd/miniconda3/envs/octree-gs2/bin/python train.py
+          /home/hung.nguyen.e/.conda/envs/octree-gs2/bin/python train.py
 
       - name: Upload model artifact
         uses: actions/upload-artifact@v4
