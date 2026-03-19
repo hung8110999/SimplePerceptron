@@ -12,7 +12,7 @@ print("Using device:", device)
 # ======================
 # Load dataset
 # ======================
-df = pd.read_csv("../dataset.csv", encoding="utf-8")
+df = pd.read_csv("/home/hung.nguyen.e/MLOps/dataset.csv", encoding="utf-8")
 
 X = df[["x1", "x2"]].values
 y = df["y"].values
