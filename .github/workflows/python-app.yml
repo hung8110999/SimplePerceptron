@@ -18,14 +18,14 @@ jobs:
       - name: Activate conda env
         run: |
           conda init
-          ~/.bashrc         
+          source ~/.bashrc         
           conda activate octree-gs2
           python -V
 
       - name: Train model
         run: |
           conda init
-          ~/.bashrc  
+          source ~/.bashrc  
           conda activate octree-gs2
           python /home/hung.nguyen.e/MLOps/SimplePerceptron/train.py
 
