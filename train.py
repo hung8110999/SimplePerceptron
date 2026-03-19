@@ -59,5 +59,5 @@ for epoch in range(epochs):
 # ======================
 # Save model
 # ======================
-torch.save(model.state_dict(), "perceptron_gpu0.pt")
+torch.save(model.state_dict(), "perceptron_gpu1.pt")
 print("Model saved: perceptron_gpu0.pt")
