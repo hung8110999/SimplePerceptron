@@ -6,7 +6,7 @@ on:
 
 jobs:
   train:
-    
+    environment: production
     runs-on: self-hosted
 
     steps:
@@ -15,8 +15,7 @@ jobs:
 
       - name: Check GPU
         run: nvidia-smi
-        environment: production
-
+        
       - name: Show Python in Conda env
         run: |
           /home/hung.nguyen.e/.conda/envs/octree-gs2/bin/python -V
